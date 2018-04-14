@@ -76,7 +76,7 @@ if version >= 508 || !exists("did_txt_syn_inits")
     HiLink txtHeader3 Statement
     HiLink txtHeader4 Statement
     HiLink txtHeader5 Statement
-    hilink txtHeader6 Statement
+    Hilink txtHeader6 Statement
     HiLink txtBlockquote Comment
     HiLink txtListBullet Operator
     HiLink txtListBullet2 Constant
