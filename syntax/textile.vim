@@ -37,9 +37,12 @@ syn match txtFootnoteRef /\[[0-9]\+]/
 syn match txtCode        /@[^@]\+@/
 
 " Block elements.
-syn match txtHeader      /^h1\. .\+/
+syn match txtHeader1     /^h1\. .\+/
 syn match txtHeader2     /^h2\. .\+/
-syn match txtHeader3     /^h[3-6]\..\+/
+syn match txtHeader3     /^h3\. .\+/
+syn match txtHeader4     /^h4\. .\+/
+syn match txtHeader5     /^h5\. .\+/
+syn match txtHeader6     /^h6\. .\+/
 syn match txtBlockquote  /^bq\./
 syn match txtFootnoteDef /^fn[0-9]\+\./
 syn match txtListBullet  /\v^\*+ /
@@ -68,9 +71,12 @@ if version >= 508 || !exists("did_txt_syn_inits")
         command -nargs=+ HiLink hi def link <args>
     endif
 
-    HiLink txtHeader Title
+    HiLink txtHeader1 Title
     HiLink txtHeader2 Question
     HiLink txtHeader3 Statement
+    HiLink txtHeader4 Statement
+    HiLink txtHeader5 Statement
+    hilink txtHeader6 Statement
     HiLink txtBlockquote Comment
     HiLink txtListBullet Operator
     HiLink txtListBullet2 Constant
